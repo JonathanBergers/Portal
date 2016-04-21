@@ -1,9 +1,22 @@
-# Stormpath React + Express Fullstack Example Project
+# Portal proof of concept
 
-This repository is an example fullstack web application, using React on the
-front-end and Express.js as your back-end server.  It uses [express-stormpath][]
-and [stormpath-sdk-react][] to authenticate users, protect your server API,
-and render default login and registration screens in your React application.
+This app is build upon the storpath react + express fullstack example project
+https://github.com/stormpath/stormpath-express-react-example
+
+
+# Techniques used:
+
+###Stormpath react
+https://github.com/stormpath/stormpath-sdk-react
+
+###React refetch
+https://github.com/heroku/react-refetch
+
+
+##references
+https://www.dreamfactory.com/
+https://stormpath.com/
+
 
 ## 1. Getting Started
 
@@ -19,7 +32,7 @@ Clone this repository, then using a terminal, navigate to the directory and run 
 $ npm install
 ```
 
-## 3. Configuration
+## 3. Configuration Stormpath
 
 In the application directory, create a file named `stormpath.yml` and
 place the configuration below in the file:
@@ -32,6 +45,18 @@ client:
 application:
   href: https://api.stormpath.com/v1/applications/XXXX <-- YOUR APP HREF
 ```
+
+## 3 Configuration Dreamfactory
+
+This application connects to a dreamfactory rest api and displays the data in a table.
+To connect to the dreamfactory api you need a dreamfactory key.
+
+Create the file config.js in the root with the following content:
+
+module.exports = {
+    dreamfactory_api_key : 'YOUR KEY HERE'
+
+}
 
 ## 4. Usage
 
@@ -51,11 +76,3 @@ Application running at http://localhost:3000
 
 The application should now be running in your browser at [http://localhost:3000](http://localhost:3000).
 
-You can get your API Keys and Application HREF from the
-[Stormpath Admin Console][].
-
-[Node.js]: https://nodejs.org
-[Stormpath]: https://stormpath.com
-[Stormpath Admin Console]: https://api.stormpath.com
-[stormpath-sdk-react]: https://github.com/stormpath/stormpath-sdk-react
-[express-stormpath]: https://github.com/stormpath/express-stormpath
