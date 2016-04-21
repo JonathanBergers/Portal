@@ -52,12 +52,12 @@ This application connects to a dreamfactory rest api and displays the data in a 
 To connect to the dreamfactory api you need a dreamfactory key.
 
 Create the file config.js in the root with the following content:
-
+```javascript
 module.exports = {
     dreamfactory_api_key : 'YOUR KEY HERE'
 
 }
-
+```
 ## 4. Usage
 
 To start the server, run this command in the folder:
